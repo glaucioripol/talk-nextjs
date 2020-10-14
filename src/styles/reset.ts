@@ -16,5 +16,4 @@ export const Reset = createGlobalStyle`
   ul {
     list-style: none;
   }
-
 `
