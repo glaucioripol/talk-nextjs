@@ -1,49 +1,49 @@
 import React from 'react'
+import Router from 'next/router'
 
 import { Container, Header, TopBar } from '../../components'
-import { ProfileImageContainer } from './styles'
+import { IGithubModel } from '../../interfaces'
+import {
+  Section,
+  BioParagraph,
+  ProfileImageContainer,
+  TitleWhoIm,
+  ContactMeLink,
+} from './styles'
 
-interface IProps {
-  profileImageUrl: string
-  githubUrl: string
-  linkedinUrl: string
-  bio: string
-}
-
-export const Home: React.FC<IProps> = ({
-  profileImageUrl,
-  bio,
-  githubUrl,
-  linkedinUrl,
-}) => (
+export const Home: React.FC<IGithubModel> = ({ avatar_url, bio, html_url, blog }) => (
   <>
     <Header title="Página inicial" />
 
     <TopBar />
+
     <Container>
       <section>
         <ProfileImageContainer>
-          <img src={profileImageUrl} width="250" alt="Minha imagem de perfil do github" />
+          <img src={avatar_url} width="250" alt="Minha imagem de perfil do github" />
         </ProfileImageContainer>
 
-        <article style={{ textAlign: 'center' }}>
-          <h2>Quem sou eu?</h2>
-          <p>{bio}</p>
+        <Section>
+          <TitleWhoIm>Quem sou eu?</TitleWhoIm>
 
-          <button>Fale comigo</button>
-        </article>
+          <BioParagraph>{bio}</BioParagraph>
+
+          <ContactMeLink onClick={() => Router.push('/fale_comigo')} type="button">
+            Fale comigo
+          </ContactMeLink>
+        </Section>
       </section>
 
-      <section style={{ textAlign: 'center' }}>
+      <Section>
         <h2>Minhas redes Sociais</h2>
 
-        <a target="_black" href={githubUrl}>
+        <a target="_black" href={html_url}>
           Github
         </a>
-        <a target="_black" href={linkedinUrl}>
+        <a target="_black" href={blog}>
           Linkedin
         </a>
-      </section>
+      </Section>
     </Container>
   </>
 )

@@ -1,4 +1,5 @@
-import { IGithubModel } from '../src/interfaces'
+import { retrieveProfileData } from '../src/services/detailsMyUser'
+
 export { Home as default } from '../src/screens'
 
 // getStaticProps -> é executado apenas em tempo de build, é usado para o SSG
@@ -6,15 +7,9 @@ export { Home as default } from '../src/screens'
 // getStaticPaths -> é utilizado para rotas dinamicas baseado em dados
 
 export async function getStaticProps() {
-  const response = await fetch('https://api.github.com/users/glaucioripol')
-  const payload = (await response.json()) as IGithubModel
+  const props = await retrieveProfileData()
 
   return {
-    props: {
-      profileImageUrl: payload.avatar_url,
-      githubUrl: payload.html_url,
-      linkedinUrl: payload.blog,
-      bio: payload.bio,
-    },
+    props,
   }
 }

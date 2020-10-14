@@ -5,7 +5,7 @@ import { TopBarContainer, ListOptionsMenu } from './styles'
 
 export const TopBar: React.FC = () => (
   <TopBarContainer>
-    <h1>Gláucio Dev &gt;__ </h1>
+    <h1>Gláucio Dev &gt;_ </h1>
 
     <nav>
       <ListOptionsMenu>
