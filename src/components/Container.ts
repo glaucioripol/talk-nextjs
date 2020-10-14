@@ -15,7 +15,6 @@ export const Container = styled.main`
     @media (min-width: 1200px) {
       width: 1170px;
     }
-
     @media screen and (max-width: 1024px) {
       padding: var(--heightTopBarMobile) ${theme.spaces.large} 0;
     }

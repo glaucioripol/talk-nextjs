@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const Reset = createGlobalStyle`
   :root {
-    --heightTopBarDesktop: 5rem;
-    --heightTopBarMobile: 8.5rem;
+    --heightTopBarDesktop: 6rem;
+    --heightTopBarMobile: 12rem;
   }
 
   * {

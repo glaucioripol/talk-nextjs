@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components'
 
 import { Reset, theme } from '../src/styles'
 
-
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={theme}>
     <Component {...pageProps} />
