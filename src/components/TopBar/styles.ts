@@ -8,6 +8,8 @@ ${({ theme }: TypeTheme) => css`
   display: flex;
   justify-content: space-between;
   padding: ${theme.spaces.small} ${theme.spaces.large};
+  position: fixed;
+  width: 100%;
 
   .optionsMenu {
     align-items: center;

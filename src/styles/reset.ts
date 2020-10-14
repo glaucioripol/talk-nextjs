@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const Reset = createGlobalStyle`
+  :root {
+    --heightTopBarDesktop: 5rem;
+    --heightTopBarMobile: 8.5rem;
+  }
+
   * {
     box-sizing: border-box;
     font-family: 'Fira Code', monospace;
@@ -11,4 +16,5 @@ export const Reset = createGlobalStyle`
   ul {
     list-style: none;
   }
+
 `
