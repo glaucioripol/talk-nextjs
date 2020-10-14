@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const Reset = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: "Roboto", "sans-serif";
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
   }

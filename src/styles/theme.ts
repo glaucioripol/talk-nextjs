@@ -20,4 +20,4 @@ export const theme = {
 
 }
 
-export type TypeTheme = typeof theme
+export type TypeTheme = { theme: typeof theme }

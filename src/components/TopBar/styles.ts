@@ -1,11 +1,7 @@
 import styled, { css } from 'styled-components';
 import { TypeTheme } from '../../styles';
 
-export const Container = styled.div`
-  
-`
-
-export const TopBar = styled.header`
+export const TopBarContainer = styled.header`
 ${({ theme }: TypeTheme) => css`
   background-color: ${theme.colors.primary.color};
   color: ${theme.colors.primary.contrastColor};
